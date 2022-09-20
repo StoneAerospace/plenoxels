@@ -9,14 +9,14 @@ from PIL import Image
 import jax
 np.random.seed(0)
 
-def get_freer_gpu():
-    os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
-    memory_available = [int(x.split()[2]) for x in open('tmp', 'r').readlines()]
-    return np.argmax(memory_available)
+#def get_freer_gpu():
+#    os.system('nvidia-smi -q -d Memory |grep -A4 GPU|grep Free >tmp')
+#    memory_available = [int(x.split()[2]) for x in open('tmp', 'r').readlines()]
+#    return np.argmax(memory_available)
 
-gpu = get_freer_gpu()
-os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
-print(f'gpu is {gpu}')
+#gpu = get_freer_gpu()
+#os.environ["CUDA_VISIBLE_DEVICES"] = str(gpu)
+#print(f'gpu is {gpu}')
 
 # Import jax only after setting the visible gpu
 import jax
@@ -35,7 +35,7 @@ flags = ArgumentParser()
 flags.add_argument(
     "--data_dir", '-d',
     type=str,
-    default='./nerf/data/nerf_synthetic/',
+    default='~/nerf_synthetic/',
     help="Dataset directory e.g. nerf_synthetic/"
 )
 flags.add_argument(
