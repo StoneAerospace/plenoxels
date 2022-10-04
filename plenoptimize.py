@@ -35,7 +35,7 @@ flags = ArgumentParser()
 flags.add_argument(
     "--data_dir", '-d',
     type=str,
-    default='/home/naglak/nerf_synthetic/',
+    default='/home/naglak/',
     help="Dataset directory e.g. nerf_synthetic/"
 )
 flags.add_argument(
@@ -47,7 +47,7 @@ flags.add_argument(
 flags.add_argument(
     "--scene",
     type=str,
-    default='ship',
+    default='testtank',
     help="Name of the synthetic scene."
 )
 flags.add_argument(
