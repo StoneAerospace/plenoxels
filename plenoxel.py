@@ -1,9 +1,6 @@
 import jax
 import jax.numpy as jnp
 from jax import lax
-#from jax.ops import index, index_update
-#from jax.numpy import index_exp as index
-#from jax.numpy.ndarray import at as index_update
 import numpy as np
 import matplotlib.pyplot as plt
 import os
